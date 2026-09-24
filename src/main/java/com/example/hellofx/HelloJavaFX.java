@@ -1,25 +1,53 @@
 package com.example.hellofx;
+
 import javafx.application.Application;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 public class HelloJavaFX extends Application {
+
     @Override
     public void start(Stage stage) {
-        Label message = new Label("Welcome to Davies");
-        Button button = new Button("Start");
-        button.setOnAction(event ->
-                message.setText("Great! You clicked the button.")
+
+        // Window title with student number
+        stage.setTitle("Simple JavaFX App -202500779");
+
+        // Welcome message
+        Label label = new Label("Welcome, Davies Mwila!");
+
+        // Start button
+        Button startButton = new Button("Start");
+
+        startButton.setOnAction(event -> {
+            label.setText("JavaFX Started!");
+        });
+
+        // Reset button
+        Button resetButton = new Button("Reset");
+
+        resetButton.setOnAction(event -> {
+            label.setText("Welcome, Davies Mwila!");
+        });
+
+        // Layout
+        VBox root = new VBox(10);
+
+        root.getChildren().addAll(
+                label,
+                startButton,
+                resetButton
         );
-        VBox layout = new VBox(20);
-        layout.setAlignment(Pos.CENTER);
-        layout.getChildren().addAll(message, button);
-        Scene scene = new Scene(layout, 500, 300);
-        stage.setTitle("My First JavaFX Application");
+
+        // Scene
+        Scene scene = new Scene(root, 400, 200);
+
+        // Set scene
         stage.setScene(scene);
+
+        // Show window
         stage.show();
     }
 
