@@ -13,10 +13,10 @@ public class HelloJavaFX extends Application {
     public void start(Stage stage) {
 
         // Window title with student number
-        stage.setTitle("Simple JavaFX App -202500779");
+        stage.setTitle("Simple JavaFX App -202505170");
 
         // Welcome message
-        Label label = new Label("Welcome, Davies Mwila!");
+        Label label = new Label("Welcome, Keegan Sakala!");
 
         // Start button
         Button startButton = new Button("Start");
@@ -29,7 +29,7 @@ public class HelloJavaFX extends Application {
         Button resetButton = new Button("Reset");
 
         resetButton.setOnAction(event -> {
-            label.setText("Welcome, Davies Mwila!");
+            label.setText("Welcome, Keegan Sakala!");
         });
 
         // Layout
